@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="repair-tools.png">
+    <title>Inance</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+        background-color: rgb(204, 229, 238);
+    }
+
+    .cls {
+        position: relative;
+        left: 58em;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    div {
+        display: flex;
+        padding-left: 30px;
+    }
+
+    #iden {
+        color: darkblue;
+        position: relative;
+        font-size: 18px;
+        top: 1.75em;
+        font-weight: bold;
+        font-family: verdana;
+    }
+
+    #id-div {
+        background-color: black;
+        height: 3.5em;
+        margin-top: 0px;
+        color: white;
+    }
+
+    #id1 {
+        margin-top: 15px;
+        position: relative;
+        left: -25px;
+    }
+
+    #id2 {
+        margin-top: 17px;
+        margin-left: 49em;
+    }
+
+    #id2 a {
+        color: white;
+        text-decoration: none;
+        position: relative;
+        top: 3px;
+    }
+
+    #child1 {
+        color: dodgerblue;
+    }
+
+    #child2:hover {
+        color: dodgerblue;
+        cursor: pointer;
+    }
+
+    #child3:hover {
+        color: dodgerblue;
+        cursor: pointer;
+    }
+
+    #child4:hover {
+        color: dodgerblue;
+        cursor: pointer;
+    }
+
+    h2 {
+        color: rgb(71, 71, 248);
+        font-size: 30px;
+        font-family: verdana;
+        position: relative;
+        top: 5em;
+        z-index: 1;
+        left: 7em;
+    }
+
+    img {
+        position: relative;
+        left: 42em;
+        width: 16em;
+        height: 27.5em;
+        top: -5em;
+    }
+
+    p {
+        position: relative;
+        font-size: 12px;
+        left: 17.5em;
+        bottom: 22.5em;
+        color: rgb(28, 26, 26);
+    }
+
+    #butn1 {
+        background-color: darkorange;
+        color: white;
+        position: relative;
+        left: 17.3em;
+        padding: 5px;
+        width: 10.75em;
+        height: 2.75em;
+        border-radius: 5px;
+        border: none;
+        font-size: 12px;
+        bottom: 20em;
+    }
+
+    #butn1:hover {
+        background-color: transparent;
+        border: 1px solid orange;
+        cursor: pointer;
+        color: orange;
+    }
+
+    #div1 {
+        position: relative;
+        bottom: 7em;
+        left: 13em;
+        width: 14em;
+        height: 11em;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2px;
+        box-shadow: 0px 0px 3px grey;
+        z-index: 1;
+    }
+
+    .cls2>span {
+        position: absolute;
+        top: 7.3em;
+        right: 6em;
+    }
+
+    #div2 {
+        position: relative;
+        bottom: 18em;
+        left: 30em;
+        width: 14em;
+        height: 11em;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: darkorange;
+        color: white;
+        box-shadow: 0px 0px 3px grey;
+        z-index: 1;
+    }
+
+    #div1:hover {
+        background-color: darkorange;
+        color: white;
+        transition: all ease 0.3s;
+    }
+
+    #div3 {
+        position: relative;
+        bottom: 29em;
+        left: 47em;
+        width: 14em;
+        height: 11em;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 3px grey;
+        z-index: 1;
+    }
+
+    #div3:hover {
+        background-color: darkorange;
+        color: white;
+        transition: all ease 0.3s;
+    }
+
+    #Improve {
+        position: relative;
+        width: 3.7em;
+        height: 4em;
+        left: 35.5em;
+        top: -37em;
+        z-index: 2;
+    }
+
+    #Page-2 {
+        position: relative;
+        bottom: 38.5em;
+        z-index: 0;
+        left: 0em;
+        width: 76.7em;
+        background-color: white;
+        height: 37em;
+    }
+
+    #Page-2>img {
+        position: absolute;
+        width: 29em;
+        height: 20em;
+        top: 10.5em;
+        left: 34em;
+    }
+
+    #Page-2>h3 {
+        position: absolute;
+        font-family: Verdana;
+        top: 13em;
+        left: 10em;
+    }
+
+    #Page-2>p {
+        position: absolute;
+        font-family: Verdana;
+        top: 28em;
+        left: 18.5em;
+        line-height: 15px;
+        color: rgb(40, 39, 39);
+        font-size: 10px;
+    }
+
+    #Page-2>#butn2 {
+        position: absolute;
+        bottom: 14em;
+        left: 15.4em;
+        background-color: rgb(50, 50, 243);
+        color: white;
+        padding: 5px;
+        width: 10.75em;
+        height: 2.75em;
+        font-size: 12px;
+        border: none;
+    }
+
+    #Page-2>#butn2:hover {
+        background-color: transparent;
+        cursor: pointer;
+        border: 1px solid rgb(50, 50, 243);
+        color: rgb(50, 50, 243);
+    }
+
+    #man-img {
+        position: relative;
+        top: -35em;
+        left: 4em;
+        width: 35%;
+        height: 500px;
+    }
+
+    #butn3 {
+        background-color: darkorange;
+        color: white;
+        position: relative;
+        left: -33em;
+        width: 12em;
+        height: 3em;
+        border-radius: 5px;
+        border: none;
+        font-size: 12px;
+        bottom: 15em;
+    }
+
+    #butn3:hover {
+        background-color: transparent;
+        border: 1px solid orange;
+        color: orange;
+        cursor: pointer;
+    }
+
+    #para2 {
+        position: relative;
+        font-size: 16px;
+        left: 10em;
+        bottom: 19em;
+        line-height: 23px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(28, 26, 26);
+    }
+
+    #heading2 {
+        position: absolute;
+        top: 50em;
+        left: 20.5em;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .cls a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .cls a:hover {
+        color: dodgerblue;
+    }
+
+    #Page-4 {
+        position: absolute;
+        top: 127em;
+        width: 100%;
+        height: 300%;
+        background-color: white;
+
+    }
+
+    #heading-page-4 {
+        color: black;
+        position: relative;
+        left: 15.5em;
+        top: 4em;
+    }
+
+    #heading-page-5 {
+
+        color: black;
+        position: relative;
+        left: 14em;
+        top: 7em;
+
+    }
+
+
+    #divison1 {
+        position: relative;
+        bottom: -15em;
+        left: -15em;
+        width: 16em;
+        height: 12em;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2px;
+        box-shadow: 0px 0px 5px grey;
+    }
+
+    #divison1:hover {
+        background-color: orange;
+        transition: all ease 0.3s;
+        color: white;
+    }
+
+    #divison2 {
+        position: relative;
+        bottom: -15em;
+        left: -9em;
+        width: 16em;
+        height: 12em;
+        align-items: center;
+        box-shadow: 0px 0px 5px grey;
+
+    }
+
+    #divison2:hover {
+        background-color: orange;
+        transition: all ease 0.3s;
+        color: white;
+    }
+
+    #divison3 {
+        position: relative;
+        bottom: -15em;
+        left: -3em;
+        width: 16em;
+        height: 12em;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2px;
+        box-shadow: 0px 0px 5px grey;
+    }
+
+    #divison3:hover {
+        background-color: orange;
+        transition: all ease 0.3s;
+        color: white;
+    }
+
+    #logo-1 {
+        width: 20%;
+        height: 25%;
+        position: absolute;
+        left: 7em;
+        top: 1.5em;
+    }
+
+     #butn4 {
+        position: relative;
+        top: 27%;
+        left: -64%;
+        background-color: rgb(50, 50, 243);
+        color: white;
+        width: 10.75em;
+        height: 2.75em;
+        font-size: 12px;
+        border: none;
+        z-index: 10;
+    }
+
+    #butn4:hover {
+        background-color: transparent;
+        border: 1px solid rgb(50, 50, 243);
+        color: rgb(50, 50, 243);
+        cursor: pointer;
+    }
+
+    #divison1 span {
+        position: absolute;
+        left: 32%;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #divison1 p {
+        position: absolute;
+        top: 60%;
+        left: 3em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    #divison1:hover p {
+        color: white;
+        transition: all ease 0.3s;
+    }
+
+    #divison2 span {
+        position: absolute;
+        left: 35%;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #divison2 p {
+        position: absolute;
+        top: 60%;
+        left: 3em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    #divison2:hover p {
+        color: white;
+        transition: all ease 0.3s;
+    }
+
+    #divison3 span {
+        position: absolute;
+        left: 36%;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #divison3 p {
+        position: absolute;
+        top: 60%;
+        left: 3em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    #divison3:hover p {
+        color: white;
+        transition: all ease 0.3s;
+    }
+
+    #logo-2 {
+        width: 20%;
+        height: 25%;
+        position: absolute;
+        left: 7em;
+        top: 1.5em;
+    }
+
+    #logo-3 {
+        width: 20%;
+        height: 25%;
+        position: absolute;
+        left: 7em;
+        top: 1.5em;
+    }
+
+    #division-4 {
+
+        position: relative;
+        top: 20em;
+        left: 10em;
+        background-color: white;
+        width: 20em;
+        height: 10em;
+        padding-top: 15px;
+        box-shadow: 0px 0px 5px grey;
+    }
+
+    #division-4>span {
+
+        position: absolute;
+        top: 7em;
+        font-size: 15px;
+    }
+
+    #set-caprio {
+        position: absolute;
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+        left: 1.25em;
+        top: 1em;
+    }
+
+    div>#caprio {
+
+        position: absolute;
+        top: 2.5em;
+        font-size: 12px;
+        font-weight: bold;
+        left: 9em;
+    }
+
+    #division-5 {
+
+        position: relative;
+        top: 9.1em;
+        left: 40em;
+        background-color: white;
+        width: 20em;
+        height: 10em;
+        padding-top: 15px;
+        box-shadow: 0px 0px 5px grey;
+
+    }
+
+    #division-5>:last-child {
+
+        position: absolute;
+        top: 7em;
+        font-size: 15px;
+    }
+
+    #main-div-arrows {
+
+        display: flex;
+
+    }
+
+    #arrow-left {
+
+        width: 1em;
+        height: 1em;
+        background-color: darkblue;
+
+    }
+
+    #left-arrow {
+
+        position: relative;
+        top: 10em;
+        left: 28em;
+        width: 2em;
+        height: 2em;
+        opacity: 100%;
+        background-color: transparent;
+    }
+
+    #right-arrow {
+
+        transform: rotate(180deg);
+        position: relative;
+        top: 10em;
+        left: 36em;
+        width: 2em;
+        height: 2em;
+        opacity: 100%;
+        background-color: transparent;
+    }
+
+    #Contact-us {
+
+        color: black;
+        position: relative;
+        left: 1em;
+        top: 8em;
+
+    }
+
+    #form-style {
+        position: relative;
+        left: 0em;
+        top: 25em;
+        width: 500px;
+        height: 200px;
+    }
+
+    input[type="submit"] {
+
+        background-color: blue;
+        color: white;
+        height: 2em;
+        width: 7em;
+    }
+
+    input[type="submit"]:hover {
+        background-color: transparent;
+        border: 1px solid blue;
+        color: blue;
+        cursor: pointer;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        height: 2em;
+    }
+
+    #footer {
+        position: relative;
+        top: 45em;
+        background-color: rgb(1, 1, 62);
+        width: 100%;
+        height: 30em;
+
+    }
+
+    h4 {
+        position: absolute;
+        top: 5em;
+        left: 45%;
+        color: white;
+    }
+
+    .last-divs {
+        position: absolute;
+        top: 9em;
+        width: 1em;
+        height: 2.75em;
+        border-radius: 50%;
+        background-color: rgb(9, 89, 186);
+        z-index: 10;
+    }
+
+    #last-div-1 {
+        position: absolute;
+        left: 25em;
+    }
+
+    #last-div-2 {
+        position: absolute;
+        left: 38em;
+    }
+
+    #last-div-3 {
+        position: absolute;
+        left: 50em;
+    }
+
+    .last-divs span {
+        position: absolute;
+        right: 0.6em;
+        top: 0.5em;
+    }
+
+    #loc-icon {
+        position: relative;
+        left: -1.08em;
+        top: 0.75em;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    #call-icon {
+        position: relative;
+        left: -1.08em;
+        top: 0.65em;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    #mail-icon {
+        position: relative;
+        left: -1.08em;
+        top: 0.65em;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    hr {
+        position: relative;
+        top: -3em;
+        left: 37em;
+        transform: rotate(90deg);
+        width: 0px;
+        height: 26em;
+    }
+
+    #for-1 {
+        color: white;
+        position: absolute;
+        top: 15em;
+        left: 26%;
+    }
+
+    #for-2 {
+        position: absolute;
+        top: 15em;
+        left: 45em;
+        color: white;
+    }
+
+    #for-3 {
+        position: absolute;
+        top: 15em;
+        left: 58em;
+        color: white;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    #follow-us {
+        position: absolute;
+        top: 17em;
+        left: 46%;
+        color: white;
+    }
+
+    .social-icon {
+        width: 1.5em;
+        height: 1.5em;
+        position: relative;
+        top: 20em;
+        left: 35em;
+        background-color: white;
+    }
+
+    .social-icon:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: all ease 0.8s;
+    }
+
+    #hr-2 {
+        position: absolute;
+        top: 25em;
+        left: 25%;
+        transform: rotate(180deg);
+        width: 47%;
+        height: 0em;
+    }
+
+    #under-hr-2 {
+
+        position: absolute;
+        top: 90%;
+        left: 43%;
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+
+    }
+
+    #Form-pic{
+        position: absolute;
+        top: 0px;
+        left: 70%;
+        height: 200%;
+        width: 50%;
+        filter: blur(10px);
+    }
+
+     #Form-pic:hover{
+            transition: all ease 0.6s;
+            border-radius: 10%;
+            cursor: pointer;
+            filter: none;
+        }
+
+    #repair-img{
+
+        position: absolute;
+        width: 28%;
+        height: 35%;
+        left: 38%;
+        top: 28%;
+    }
+
+    #maintain-img{
+
+        position: absolute;
+        width: 28%;
+        height: 35%;
+        left: 34%;
+        top: 28%;
+    }
+
+    .cls a:active{
+
+        color: red;
+        text-transform: uppercase;
+    }
+
+     .cls a:visited{
+
+        color: purple;
+        text-decoration: dashed underline;
+    }
+
+    #up-butn{
+
+        position: absolute;
+        top: 77%;
+        left: 90%;
+        width: 8%;
+        height: 19%;
+        border-radius: 50%;
+    }
+
+    #up-img{
+        position: absolute;
+        left: 1.5em;
+        top: 1.1em;
+        width: 60%;
+        height: 70%;
+    }
+
+    #up-butn a:active{
+
+        transition: all ease 0.9s;
+    }
+
+
+</style>
+
+<body>
+    <div id="id-div">
+        <div id="id1">📞Call: +01 123455678990</div>
+        <div id="id2">✉Email: &nbsp<a href="mailto: abc123@gmail.com">mail@domain.com</a></div>
+    </div>
+    <div id="iden">INANACE</div>
+    <div class="cls">
+        <div id="child1">Home</div>
+        <div id="child2"><a href="#Page-2">About</a></div>
+        <div id="child3"><a href="#Page-3">Services</a></div>
+        <div id="child4"><a href="#Contact-us">Contact Us</a></div>
+    </div>
+    <h2>Repair and <br> Maintainence <br> Services</h2>
+    <img src="Worker Image.PNG" alt="worker's image">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum voluptatem <br> adipisci. Quos molestiae saepe
+        dicta nobis pariatur, tempora iusto, ad possimus soluta <br> hic praesentium mollitia consequatur beatae,
+        aspernatur culpa.</p>
+    <button id="butn1">CONTACT US</button>
+    <div id="div1" class="cls2"><span>REPAIR</span><img src="house.png" alt="repair image" id="repair-img"></div>
+    <div id="div2" class="cls2"><span>IMPROVE</span></div>
+    <div id="div3" class="cls2"><span>MAINTAIN</span><img src="Miantain.png" alt="Maintain image" id="maintain-img"></div>
+    <img src="Improve Icon.PNG" id="Improve">
+    <div id="Page-2">
+        <h3>ABOUT US</h3>
+        <p>There are many variations of passages of Lorem Ipsum available, <br> but the majority have suffered
+            alteration in some form, by <br> injected humour, or randomisedThere are many variations of <br> passages of
+            Lorem Ipsum available, but the majority have suffered <br> alteration in some form, by injected humour, or
+            randomised</p>
+        <img src="2nd page pic.PNG" alt="">
+        <button id="butn2">READ MORE</button>
+    </div>
+    <div id="Page-3">
+        <img src="Man's pic.png" alt="Mans pic" id="man-img">
+        <h2 id="heading2">We Provide Professional <br> Home Services.</h2>
+        <p id="para2">randomised words which don't look even slightly believable. If you are going to <br> use a passage
+            of Lorem Ipsum, you need to be sure there isn't anything <br> embarrassing hidden in the middle of text. All
+            randomised words which don't <br> look even slightly</p>
+        <button id="butn3">READ MORE</button>
+    </div>
+    <div id="Page-4">
+        <h2 id="heading-page-4">OUR&nbsp;SERVICES</h2>
+        <div class="Main-div-4">
+            <div id="divison1"><img src="s1.png" alt="Maintainence logo" id="logo-1"><span>Maintainence</span>
+                <p>when looking at its layout. The point of using Lorem Ipsum isthat it has a more-or-less normal</p>
+            </div>
+            <div id="divison2"><img src="s2.png" alt="Electrical" id="logo-2"><span>Electrical</span>
+                <p>when looking at its layout. The point of using Lorem Ipsum isthat it has a more-or-less normal</p>
+            </div>
+            <div id="divison3"><img src="s3.png" alt="Plumbing" id="logo-3"><span>Plumbing</span>
+                <p>when looking at its layout. The point of using Lorem Ipsum isthat it
+                    has a more-or-less normal</p>
+            </div>
+            <button id="butn4">View More</button>
+        </div>
+    </div>
+
+    <h2 id="heading-page-5">WHAT OUR CLIENTS SAY</h2>
+
+    <div id="division-4">
+        <img src="caprio.webp" id="set-caprio" alt="Pic"> <span id="caprio"> <br> Leonardo DiCaprio </span>
+        <span> Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Eaque soluta dolore labore, nobis
+            blanditiis earum ex. </span>
+    </div>
+
+    <div id="division-5">
+        <img src="other.webp" id="set-caprio" alt="Pic"> <span id="caprio"> <br> Alex Bill </span> <br>
+
+        <span> Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Eaque soluta dolore labore, nobis
+            blanditiis earum ex. </span>
+    </div>
+
+    <div id="arrows"> <img src="blue-left-arrow-1.gif" id="left-arrow" alt="❌">
+        <img src="blue-left-arrow-1.gif" id="right-arrow" alt="">
+    </div>
+
+    <h2 id="Contact-us">CONTACT US</h2>
+
+    <div id="form-style">
+
+        <form>
+
+            <input type="text" placeholder="Name" height="50%" size="40px"> <br><br>
+            <input type="text" placeholder="Phone Number" size="40px"> <br><br>
+            <input type="email" placeholder="Email" size="40px" required> <br><br>
+            <textarea placeholder="Message" rows="15" cols="38"></textarea> <br><br>
+            <input type="submit" value="Send">
+        </form>
+        <img src="Ashir Pic.jpeg" alt="My pic" id="Form-pic">
+    </div>
+
+    <div id="footer">
+
+        <h4>GET IN TOUCH</h4>
+
+        <div class="last-divs" id="last-div-1">
+            <img src="location.png" id="loc-icon" alt="location icon">
+        </div>
+        <small id="for-1">Lorem ipsum is simply dummy text</small>
+
+        <div class="last-divs" id="last-div-2">
+            <img src="call.png" alt="call icon" id="call-icon">
+        </div>
+        <small id="for-2">0123-456789</small>
+        <div class="last-divs" id="last-div-3">
+            <img src="mail icon.png" alt="mail icon" id="mail-icon">
+        </div>
+        <small id="for-3"><a href="mailto:abc123@gmail.com">abc123@gmail.com</a></small>
+
+        <hr><br>
+        <hr id="hr-2"><br>
+
+        <h4 id="follow-us">FOLLOW US</h4>
+        <a href="https://www.facebook.com"><img src="fb icon.webp" alt="Facebook" class="social-icon"></a>
+        <a href="https://www.twitter.com"><img src="x icon.webp" alt="Twitter" class="social-icon"></a>
+        <a href="https://www.youtube.com"><img src="YT icon.webp" alt="you tube" class="social-icon"></a>
+        <a href="https://www.instagram.com"><img src="ig icon.webp" alt="Instagram" class="social-icon"></a><br>
+
+        <p id="under-hr-2">
+            © All Rights Reserved!
+        </p>
+
+        <button id="up-butn"><a href="#"><img src="up-arrow.png" alt="Upper arrow" id="up-img"></a></button>
+
+    </div>
+</body>
+
+</html>
